@@ -1,0 +1,240 @@
+ **INTERNAL DEVELOPMENT** Open Watcom Linker Version 1.5beta1 Limited Availability
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       11/05/01 10:13:02
+Executable Image: gifinter.exe
+creating an OS/2 EMX executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+CGROUP                          0001:00000000        00006d10
+DGROUP                          0002:00000000        00000280
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+TEXT32                 CODE           CGROUP         0001:00000000   00006d10
+________TEXT           CODE           CGROUP         0001:00006d10   00000000
+DATA32                 DATA           DGROUP         0002:00000000   00000180
+SET1__os2dll           DATA           DGROUP         0002:00000180   00000004
+SET2__os2dll           DATA           DGROUP         0002:00000184   00000000
+SET3__os2dll           DATA           DGROUP         0002:00000184   00000004
+SET1___CTOR_LIST__     DATA           DGROUP         0002:00000188   00000004
+SET2___CTOR_LIST__     DATA           DGROUP         0002:0000018c   00000000
+SET3___CTOR_LIST__     DATA           DGROUP         0002:0000018c   00000004
+SET1___DTOR_LIST__     DATA           DGROUP         0002:00000190   00000004
+SET2___DTOR_LIST__     DATA           DGROUP         0002:00000194   00000000
+SET3___DTOR_LIST__     DATA           DGROUP         0002:00000194   00000004
+SET1___crtinit1__      DATA           DGROUP         0002:00000198   00000004
+SET2___crtinit1__      DATA           DGROUP         0002:0000019c   00000000
+SET3___crtinit1__      DATA           DGROUP         0002:0000019c   00000004
+SET1___crtexit1__      DATA           DGROUP         0002:000001a0   00000004
+SET2___crtexit1__      DATA           DGROUP         0002:000001a4   00000000
+SET3___crtexit1__      DATA           DGROUP         0002:000001a4   00000004
+SET1___eh_frame__      DATA           DGROUP         0002:000001a8   00000004
+SET2___eh_frame__      DATA           DGROUP         0002:000001ac   00000008
+SET3___eh_frame__      DATA           DGROUP         0002:000001b4   00000004
+SET1___eh_init__       DATA           DGROUP         0002:000001b8   00000004
+SET2___eh_init__       DATA           DGROUP         0002:000001bc   00000004
+SET3___eh_init__       DATA           DGROUP         0002:000001c0   00000004
+SET1___eh_term__       DATA           DGROUP         0002:000001c4   00000004
+SET2___eh_term__       DATA           DGROUP         0002:000001c8   00000004
+SET3___eh_term__       DATA           DGROUP         0002:000001cc   00000004
+SET1___fork_parent1__  DATA           DGROUP         0002:000001d0   00000004
+SET2___fork_parent1__  DATA           DGROUP         0002:000001d4   00000000
+SET3___fork_parent1__  DATA           DGROUP         0002:000001d4   00000004
+SET1___fork_child1__   DATA           DGROUP         0002:000001d8   00000004
+SET2___fork_child1__   DATA           DGROUP         0002:000001dc   00000000
+SET3___fork_child1__   DATA           DGROUP         0002:000001dc   00000004
+________DATA           DATA           DGROUP         0002:000001e0   00000000
+BSS32                  BSS            DGROUP         0002:000001e0   000000a0
+c_common               BSS            DGROUP         0002:00000280   00000000
+________BSS            BSS            DGROUP         0002:00000280   00000000
+STACK                  STACK          AUTO           0003:00000000   00100000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: U:\usr\lib\crt0wild.obj({standard input})
+0001:00000000* __text
+0002:00000000* __data
+0002:00000000* ___data_start
+0002:000001e0* ___bss_start
+0002:00000180+ __os2dll
+0002:00000188  ___CTOR_LIST__
+0002:00000190  ___DTOR_LIST__
+0002:00000198* ___crtinit1__
+0002:000001a0* ___crtexit1__
+0002:000001a8  ___eh_frame__
+0002:000001b8  ___eh_init__
+0002:000001c4  ___eh_term__
+0002:000001d0+ ___fork_parent1__
+0002:000001d8+ ___fork_child1__
+Module: u:/tmp\ldconv_gifinter_o_21704dbd160e1ee48.obj(gifinter.c)
+0001:0000010f  _main
+0001:0000010f* main
+Module: U:\usr\lib\libend.lib(src/libend/386/endlink386.asm)
+0002:00000280  _end
+0002:000001e0  _edata
+Module: U:\usr\lib\libend.lib(src/libend/386/end.asm)
+0001:00006d10* _etext
+0001:00006d10* __etext
+0000:00000000  WEAK$ZERO
+0002:00000280  __end
+0002:000001e0  __edata
+Module: U:\tmp\ldconv_gcc452_a_21704dbd160e1274e8.lib(__main.obj)
+0001:00000960* ___do_global_dtors
+0001:0000096b* ___do_global_ctors
+0001:00000983  ___main
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(qprintf.obj)
+0001:000009b0  _GifQprintf
+0002:00000080  _GifQuietPrint
+Module: U:\tmp\ldconv_libgetarg_a_21704dbd160e11f400.lib(getarg.obj)
+0001:00000a10  _GAGetArgs
+0001:00001a18  _GAPrintErrMsg
+0001:00001b9f  _GAPrintHowTo
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(dgif_lib.obj)
+0001:00002090  _DGifOpenFileName
+0001:000020e0  _DGifOpenFileHandle
+0001:000024c5* _DGifGetScreenDesc
+0001:000022f9* _DGifOpen
+0001:0000273e  _DGifGetRecordType
+0001:0000283e  _DGifGetImageDesc
+0001:00002c73  _DGifGetLine
+0001:000031d9* _DGifGetCodeNext
+0001:00002d3a* _DGifGetPixel
+0001:00002df7  _DGifGetExtension
+0001:00002ebd  _DGifGetExtensionNext
+0001:00002ff3  _DGifCloseFile
+0001:0000318e* _DGifGetCode
+0001:000037fe* _DGifGetLZCodes
+0001:00003b96* _DGifSlurp
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(egif_lib.obj)
+0001:00003d80* _EGifOpenFileName
+0001:00003e08  _EGifOpenFileHandle
+0001:00003f25* _EGifOpen
+0001:0000402c* _EGifSetGifVersion
+0001:0000404f  _EGifPutScreenDesc
+0001:00004351  _EGifPutImageDesc
+0001:0000468a  _EGifPutLine
+0001:00004748* _EGifPutPixel
+0001:000047d4* _EGifPutComment
+0001:00004c9f  _EGifPutExtension
+0001:00004916* _EGifPutExtensionFirst
+0001:00004a6a* _EGifPutExtensionNext
+0001:00004b52* _EGifPutExtensionLast
+0001:00004e4e* _EGifPutCode
+0001:00004e8e* _EGifPutCodeNext
+0001:00004fba  _EGifCloseFile
+0001:00005895* _EGifSpew
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(gif_err.obj)
+0001:00005c80* _GifLastError
+0001:00005f1d  _PrintGifError
+0002:00000250  __GifError
+Module: U:\tmp\ldconv_gcc452_a_21704dbd160e1274e8.lib(emx-ctordtor.obj)
+0001:00006240  ___ctordtorInit
+0001:00006272  ___ctordtorTerm
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(gifalloc.obj)
+0001:000062b0* _BitSize
+0001:000062d7  _MakeMapObject
+0001:00006398  _FreeMapObject
+0001:000063bf* _UnionColorMap
+0001:0000664a* _ApplyTranslation
+0001:00006691* _MakeExtension
+0001:0000669f  _AddExtensionBlock
+0001:00006793  _FreeExtension
+0001:00006805* _FreeLastSavedImage
+0001:000068a7* _MakeSavedImage
+0001:00006aaf  _FreeSavedImages
+Module: U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib(gif_hash.obj)
+0001:00006b70  __InitHashTable
+0001:00006ba2  __ClearHashTable
+0001:00006bc5  __InsertHashTable
+0001:00006c22  __ExistsHashTable
+Module: U:\tmp\ldconv_gcc452_a_21704dbd160e1274e8.lib(emx-eh.obj)
+0001:00006ca0  ___ehInit
+0001:00006cd5* ___ehTerm
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+___libc_ForkRegisterModule          libc063
+___init_app                         libc063
+__wildcard                          libc063
+__CRT_init                          libc063
+__atfork_callback                   libc063
+___stderrp                          libc063
+__std_exit                          libc063
+__std_fprintf                       libc063
+__std_malloc                        libc063
+__std_free                          libc063
+___ctordtorInit1                    libc063
+___ctordtorTerm1                    libc063
+__std_atexit                        libc063
+__std_vsprintf                      libc063
+__std_fputs                         libc063
+__std_strcpy                        libc063
+__std_memcpy                        libc063
+__std_strlen                        libc063
+__std_sscanf                        libc063
+__std_fwrite                        libc063
+__std_fputc                         libc063
+__std_open                          libc063
+__std_close                         libc063
+__std_memset                        libc063
+__std_fdopen                        libc063
+__std_fread                         libc063
+__std_fclose                        libc063
+__std_strncmp                       libc063
+__std_realloc                       libc063
+__std_strncpy                       libc063
+___register_frame_table             gcc452
+___deregister_frame                 gcc452
+__std_calloc                        libc063
+__std_memcmp                        libc063
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+U:\tmp\ldconv_gif_a_21704dbd160e117ae8.lib
+U:\tmp\ldconv_libgetarg_a_21704dbd160e11f400.lib
+U:\tmp\ldconv_gcc452_a_21704dbd160e1274e8.lib
+U:\usr\lib\libc_alias.lib
+U:\usr\local452\lib\libc_dll.lib
+U:\usr\lib\libend.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00100000 (1048576.)
+Memory size:  00106f90 (1077136.)
+Entry point address: 0001:00000000
+Link time: 00:00.08

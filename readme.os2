@@ -1,0 +1,25 @@
+This is the OS/2 port of GifLib v.4.1.6, an open source GIF manipulation library.
+
+I built it for it seems useful with some open source conversion programs, using GCC 4.5.2
+from Paul Smedley. Building worked like a charm :)
+
+Read the documentation (text files) in the distribution files for more informations, or go
+to the GifLib sourceforge page for more informations, at
+
+http://sourceforge.net/projects/giflib/
+
+Note that this archive contains the complete giflib build in the os2\ subdirectory. Also,
+the source files are already configured for install in \usr\local452. If you want to build
+and install your work into another directory, you can copy the os2\ files or re-configure and
+make the files.
+
+Note also that this build was made with GCC 4.5.2, so if you use another version you will have
+to rebuild it.
+
+Please consider making a donation to Paul Smedley for his hard work in OS/2 software. And, if
+you please, send me a note! Users' feedback is always welcome, and sometimes really necessary.
+
+Have fun.
+Mentore Siesto
+Pisa, Italy
+mentore.siesto@alice.it
